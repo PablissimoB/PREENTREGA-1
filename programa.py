@@ -20,12 +20,12 @@ def logUser(myDatabase):
         print("----LOGIN----" )
         nombre = input("Ingrese el nombre: ")
         password = input("Ingrese el password: ")
-        contrasena = myDatabase.get(nombre,"Usuario o Password incorrecto")
-        if(contrasena == password):
+        contrasena = myDatabase.get(nombre)
+        if contrasena == password:
             print("Login exitoso. Bienvenido "+nombre)
             return True
         else :
-            print(contrasena)
+            print("Usuario o Password incorrecto")
             return False
 
 def myPanel(myDatabase):
